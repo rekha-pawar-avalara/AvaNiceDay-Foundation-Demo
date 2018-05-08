@@ -1,0 +1,103 @@
+.date-component-wrapper {
+  background-color: #fff;
+  min-width: 140px;
+  position: relative;
+  z-index: 5;
+
+  i {
+    &.icon-date {
+      color: $avalara-dark-blue;
+      cursor: pointer;
+      font-size: 200%;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      z-index: -1;
+    }
+  }
+
+  input[type="text"] {
+    background-color: transparent;
+    cursor: pointer;
+    padding-right: 34px;
+    margin-bottom: 0;
+  }
+
+  input[type="text"][disabled] {
+    background-color: hsla(0, 0%, 94%, 0.65);
+    cursor: default;
+  }
+
+  .has-no-end-date {
+    position: absolute;
+    margin: 5px 8px;
+    z-index: -1;
+    font-size: 1rem; 
+
+    +input[type="text"] {
+      color: transparent;
+    }
+  }
+}
+
+.pika-single {
+  font-family: $body-font-family;
+
+  .pika-table {
+    margin-bottom: 0;
+
+    tbody:first-of-type tr:first-of-type {
+      border-top: #FFF 3px solid;
+    }
+
+    th {
+      line-height: 30px;
+    }
+  }
+
+  .pika-title {
+    color: $avalara-dark-orange;
+  }
+
+  abbr[title] {
+    border-bottom: none;
+  }
+
+  .pika-next, .pika-prev {
+    text-indent: 0;
+    opacity: 1;
+    background-image: none;
+
+    &:before {
+
+      display: inline-block;
+      text-align: center;
+      width: 20px;
+      color: $avalara-dark-blue;
+    }
+
+    &:hover:before {
+      color: #FFF;
+    }
+  }
+
+  .pika-next {
+    &:before {
+      @include avicon_right_arrow();
+    }
+  }
+
+  .pika-prev {
+    &:before {
+      @include avicon_left_arrow();
+    }
+  }
+
+  .end-date {
+    clear: both;
+    display: block;
+    margin: 8px;
+    text-align: center;
+  }
+}
+

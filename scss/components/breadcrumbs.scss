@@ -1,0 +1,32 @@
+.breadcrumbs {
+  border: none;
+  background-color: transparent;
+  margin-bottom: 2rem;
+  padding-left: 0;
+  padding-top: 0;
+
+  > * {
+    font-size: $h2-font-size;
+    margin-top: 0.4rem;
+    text-transform: none;
+
+    &:before {
+      font-size: .8em;
+      margin: 0;
+      margin-left: 0.25em;
+      margin-right: 0.25em;
+      color: $avalara-medium-gray;
+      @include avicon_right_arrow();
+    }
+  }
+  .active {
+    color: $crumb-font-color;
+  }
+  a.active {
+    font-weight: normal;
+  }
+  span.current {
+    font-weight: normal;
+    color: $body-font-color;
+  }
+}

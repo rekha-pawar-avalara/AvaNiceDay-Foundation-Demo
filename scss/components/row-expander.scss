@@ -1,0 +1,66 @@
+.row-expander {
+  width: 2rem;
+  cursor: pointer;
+  height: 100%;
+  vertical-align: middle;
+  padding-left: .5rem;
+  padding-right: 0;
+  text-align: left;
+
+  border-left: 1px solid #FFF;
+  &.expanded {
+    background-color: white;
+    border-left: 1px solid $avalara-dark-orange;
+  }
+
+  //the two states of the arrow
+  i:before {
+    display: inline-block;
+    color: $avalara-dark-blue;
+    font-size: 140%;
+    transition: transform 0.25s ease-in-out;
+  }
+  &.expanded {
+    i:before {
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+      /*color: #FFF;*/
+    }
+  }
+
+  &:hover {
+    //highlight both the anchor and arrow at the same time
+    i:before {
+      color: $avalara-dark-orange;
+    }
+    a {
+      color: $avalara-dark-orange;
+    }
+  }
+
+  &.disabled {
+    i:before {
+      visibility: hidden;
+    }
+  }
+}
+
+//this is the orange column that extends down the expanded row
+.expander-column {
+  background-color: white;
+  border-left: 1px solid $avalara-dark-orange;
+  border-bottom: none !important;
+  border-top: none !important;
+  height: 100%;
+  width: 2rem;
+  vertical-align: middle;
+  padding: 0;
+
+  ~td {
+    background-color: white;
+  }
+}

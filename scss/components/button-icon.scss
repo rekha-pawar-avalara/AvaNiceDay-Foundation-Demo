@@ -1,0 +1,94 @@
+// Label and icon button pair
+@import "avalara-palette";
+
+.button-icon {
+  .label-icon-link {
+    display: block;
+    &:hover {
+      color: $avalara-light-blue;
+    }
+    &:active {
+      color: $avalara-lightest-blue;
+    }
+    &.disabled {
+      &:hover {
+        color: $avalara-disabled-gray;
+      }
+      &:active {
+        color: $avalara-disabled-gray;
+      }
+    }
+  }
+}
+
+.no-icon {
+  height: 31px;
+  padding-top: 6px;
+}
+
+.label-icon-link {
+
+  i {
+    color: $avalara-dark-blue;
+    cursor: pointer;
+    display: inline-block;
+    font-size: rem-calc(21);
+    margin-right: rem-calc(5);
+    vertical-align: middle;
+    &.with-icon-bg {
+      color: #fff;
+      background-color: $avalara-dark-blue;
+      border-radius: 0;
+      font-size: 1.38462rem;
+      padding: 6px;
+    }
+  }
+
+  span {
+    display: inline-block;
+    margin-top:2px;
+    vertical-align: middle;
+    &.right-piped {
+      display: inline-block;
+    }
+    &.with-no-icon {
+      line-height: 2px;
+    }
+  }
+
+  &:active {
+    i {
+      color: $avalara-lightest-blue;
+    }
+    i.with-icon-bg {
+      background-color: $avalara-lightest-blue;
+      color: #fff;
+    }
+  }
+
+  &:hover {
+    i {
+      color: $avalara-light-blue;
+    }
+    i.with-icon-bg {
+      background-color: $avalara-light-blue;
+      color: #fff;
+    }
+  }
+
+  &.disabled {
+    i.with-icon-bg {
+      background-color: $avalara-disabled-gray;
+      color: #fff;
+      cursor: default;
+    }
+
+    i {
+      color: $avalara-disabled-gray;
+    }
+  }
+}
+
+table .button-icon {
+    display: inline-block;
+}

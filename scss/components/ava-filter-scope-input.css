@@ -1,0 +1,28 @@
+.filter-scope-search-form label {
+  margin-top: 0; }
+.filter-scope-search-form input[type="search"] {
+  margin-bottom: 0 !important;
+  box-sizing: border-box; }
+.filter-scope-search-form select {
+  margin-bottom: 0 !important;
+  font-size: 1rem;
+  padding-bottom: 0;
+  padding-top: 0;
+  background-color: #E3EEF6; }
+.filter-scope-search-form .clear-link {
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  margin-top: -.5rem;
+  line-height: 1rem;
+  font-size: .85em; }
+.filter-scope-search-form .label-icon-link {
+  line-height: 2.5rem; }
+.filter-scope-search-form .search-btn {
+  display: inline-block;
+  margin-top: .1rem; }
+  .filter-scope-search-form .search-btn i {
+    height: 2.4rem;
+    width: 2.5rem; }
+
+/*# sourceMappingURL=ava-filter-scope-input.css.map */

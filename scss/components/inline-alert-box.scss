@@ -1,0 +1,46 @@
+.inline-alert-box {
+  background-color: $avalara-lightest-gray;
+  border: 1px solid $avalara-lighter-gray;
+  border-bottom-color: $avalara-light-gray;
+  border-top-color: $avalara-light-gray;
+  margin-left: 1rem;
+  padding: 1rem;
+
+  &.info,
+  &.warning,
+  &.alert,
+  &.success {
+    padding-left: 1.5rem;
+
+    &:before {
+      content: '!';
+      display: block;
+      height: 102%;
+      position: absolute;
+      left: 0;
+      top: -1px;
+      width: 8px;
+    }
+  }
+
+  &.info:before {
+    background-color: $avalara-verylightest-blue;
+    color: $avalara-verylightest-blue;
+  }
+
+  &.warning:before {
+    background-color: $avalara-warning-color;
+    color: $avalara-warning-color;
+  }
+
+  &.alert:before {
+    background-color: $avalara-alert-red;
+    color: $avalara-alert-red;
+    height: 101%;
+  }
+
+  &.success:before {
+    background-color: $avalara-light-green;
+    color: $avalara-light-green;
+  }
+}

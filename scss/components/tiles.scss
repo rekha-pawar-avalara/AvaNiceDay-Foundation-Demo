@@ -1,0 +1,59 @@
+.app-tile {
+  border: thin solid $avalara-lighter-gray;
+  border-bottom-color: $avalara-medium-gray;
+  border-top-color: $avalara-lightest-gray;
+  background: $avalara-lighter-gray;
+  margin-top: .5rem;
+  min-height: rem-calc(205);
+
+  ul {
+    padding-left: 2.25rem;
+  }
+
+  .row {
+    &:nth-of-type(1) {
+      padding-top: 10px;
+    }
+  }
+  hr {
+    width: 85%;
+    margin-left: 40px;
+  }
+  label {
+    padding-left: 15px;
+    margin-left: 15px;
+  }
+
+  &.payment-method {
+    &.alert, &.warning {
+      background: #e4eff6;
+      margin-bottom: 5px;
+    }
+  }
+
+  @mixin before {
+    width: 8px;
+    content: ' ';
+    min-height: rem-calc(205);
+    position: absolute;
+  }
+  &.alert:before {
+    background: $avalara-alert-red;
+    @include before();
+  }
+
+  &.warning:before {
+    background: $avalara-warning-color;
+    @include before();
+  }
+
+  &.white {
+    background: $white;
+    color: $avalara-alert-red;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    margin-left: 0;
+    border: none;
+  }
+}

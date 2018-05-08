@@ -1,0 +1,19 @@
+.avacordion {
+  .accordion-navigation {
+    > a:before {
+      @include avicon_drop_arrow();
+      padding-right: rem-calc(2);
+    }
+    &.active {
+      > a:before {
+        @include avicon_raise_arrow();
+      }
+    }
+  }
+  .content {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}

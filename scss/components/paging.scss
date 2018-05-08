@@ -1,0 +1,7 @@
+/* Foundation has a pagination component. This is a different design. */
+.paging {
+  &.inline-list {
+    margin: 0 auto;
+    width: 345px;
+  }
+}

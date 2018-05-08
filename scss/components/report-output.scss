@@ -1,0 +1,118 @@
+.row.reports-form {
+  .row.date-range {
+    margin-left: rem-calc(10);
+    label {
+      margin-top: 0;
+    }
+  }
+}
+
+.report-output {
+  .report-output-toolbar {
+
+    div:nth-of-type(1) {
+      label {
+        margin-top: 0;
+        margin-bottom:0;
+      }
+      ul {
+        margin-left:0;
+        margin-bottom:0;
+        li {
+          margin-left:.5rem;
+          &:before {
+            content: '/';
+            margin-right:.5rem;
+            font-size:1.2em;
+          }
+          /* all li after the first */
+          &:nth-of-type(1){
+            margin-left:0;
+            &:before {
+              margin-right:0;
+              content: ' ';
+            }
+          }
+        }
+
+      }
+    }
+
+    div:nth-of-type(2) ul {
+      float: right;
+      margin-bottom:0;
+      margin-top:.5rem;
+    }
+
+    .report-download-resource-form {
+      //inline radio button resources drop to next line
+      overflow-x: visible;
+      white-space: nowrap;
+    }
+  }
+
+  //TODO should this be part of some general compnent scss?
+  .small-button-icon {
+    i {
+      font-size: 1.5rem;
+      top:3px;
+      right: .3rem;
+      position:relative;
+    }
+  }
+
+}
+
+#report-container {
+  margin-top: 2.5rem;
+  min-height: 60px;
+  overflow-x: auto;
+
+  .ReportExecution {
+    cursor: pointer;
+  }
+
+  table {
+    margin-bottom: inherit;
+    background: inherit;
+    border: inherit;
+
+    tr {
+      border-top: inherit;
+
+      &:nth-of-type(even) {
+        background: inherit;
+      }
+
+      height: inherit !important;
+
+      td {
+        padding: 0.5rem 0.5rem;
+
+        >img {
+          position: absolute;
+        }
+      }
+    }
+
+    tr:nth-of-type(3) {
+      height: 24px !important;
+    }
+
+    &:first-of-type {
+      -webkit-box-shadow: 0 0 8px 2px rgba(0,0,0,0.15);
+      -moz-box-shadow: 0 0 8px 2px rgba(0,0,0,0.15);
+      box-shadow: 0 0 8px 2px rgba(0,0,0,0.15);
+      margin: 10px auto;
+    }
+
+    table:first-of-type {
+      -webkit-box-shadow: inherit;
+      -moz-box-shadow: inherit;
+      box-shadow: inherit;
+    }
+
+    table {
+    }
+  }
+}

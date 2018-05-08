@@ -1,0 +1,36 @@
+.check-box input {
+  opacity: 0;
+  position: absolute; }
+.check-box .check-box-visual {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  border: 1px solid #cccccc;
+  background-color: #FFF;
+  color: #5f6062;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  bottom: .1rem; }
+  .check-box .check-box-visual.readonly {
+    border: 1px solid white; }
+  .check-box .check-box-visual:before {
+    position: absolute;
+    font-size: rem-calc(16);
+    top: -5px; }
+  .check-box .check-box-visual.has-focus {
+    border: 1px dotted #5f6062; }
+
+label.check-box-wrapper {
+  text-transform: none;
+  color: #5f5062;
+  font-size: 1rem;
+  display: block;
+  letter-spacing: 0; }
+  label.check-box-wrapper.disabled {
+    color: #ac9caf; }
+
+td label.check-box-wrapper {
+  margin: 0; }
+
+/*# sourceMappingURL=check-box.css.map */

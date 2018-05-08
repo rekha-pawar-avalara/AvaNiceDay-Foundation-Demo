@@ -1,0 +1,14 @@
+a.async-download {
+
+  &.is-awaiting-src {
+    cursor: progress;
+    img {
+      height: 1em;
+    }
+
+
+    &:before {
+      display: none;
+    }
+  }
+}

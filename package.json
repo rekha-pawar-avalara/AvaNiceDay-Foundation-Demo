@@ -1,0 +1,19 @@
+{
+  "name": "@avalara/ava-nice-day-foundation",
+  "repository": "git@github.com:Avalara/AvaNiceDay-Foundation.git",
+  "version": "0.9.16",
+  "description": "Foundation theme for Avalara products",
+  "author": "Aaron Brown, Stephen Prockow, Justin Soliz, Eric Artzt, Vivian Ho, Aaron McCloud, Ewelina Kieley, Josh Sherman, Ben Johnson, Genevieve Conty, Mehul Chopra, Steve Walsh",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "postinstall": "node scripts/post-install.js"
+  },
+  "dependencies": {
+    "foundation-sites": "~5.5.0"
+  },
+  "devDependencies": {
+    "node-sass": "^3.10.0"
+  }
+}

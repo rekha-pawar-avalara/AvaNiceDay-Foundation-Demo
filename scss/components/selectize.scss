@@ -1,0 +1,121 @@
+@mixin italicizedPlaceholder() {
+  font-style: italic;
+  word-spacing: .2em;
+  color: $avalara-lighterMediumDark-gray;
+}
+.selectize-control .selectize-input input {
+  height: inherit;
+  display: inline-block;
+}
+
+.selectize-control.single .selectize-input {
+  background-color: #FFF;
+  background-image: none;
+
+  &.dropdown-active {
+      &:after {
+        border-color: transparent transparent $avalara-light-blue transparent;
+      }
+  }
+  &:after {
+    border-color: $avalara-light-blue transparent transparent transparent;
+  }
+}
+
+.selectize-control .selectize-dropdown {
+  .option[data-value="Select from available"] {
+    @include italicizedPlaceholder();
+  }
+
+  /* force display of scroll bar so that users know that they can scroll through several options. does not work on all browsers */
+  .selectize-dropdown-content {
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+
+      &:vertical {
+        width: .75rem;
+      }
+
+      &:horizontal {
+        height: .75rem;
+      }
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: .5rem;
+      border: 2px solid white; /* should match background, can't be transparent */
+      background-color: rgba(0, 0, 0, .5);
+    }
+  }
+}
+
+
+.selectize-dropdown,
+.selectize-input {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.success .selectize-input {
+  border-color: $avalara-light-green;
+}
+.selectize-control {
+  height: 18px + 2 *(8px) + 2;
+
+  /*For some reason variable height adds additional padding on
+  bottom of control for single entries. Hence, input height + padding + border */
+
+  &.multi {
+    height: auto;
+    .selectize-input.has-items {
+      padding: 10px 8px 10px;
+    }
+    &.plugin-remove_button [data-value] {
+      padding-right: 24px !important; // overriding an important declaration in vendor css
+    }
+    &.plugin-remove_button .item[data-value] {
+      color: $avalara-dark-gray;
+      background-color: $avalara-light-gray;
+      width: 100%;
+      line-height: 1.8;
+      padding-right: 2px !important; // overriding another important declaration in vendor
+      background-image: none;
+      border: none;
+      text-shadow: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+  &.plugin-remove_button [data-value] {
+
+    &.item {
+      padding-right: 5px !important; // overriding an important declaration in vendor css
+    }
+
+    .remove {
+      color: $avalara-alert-red;
+      font-size: 1rem;
+      line-height: 1.8;
+      padding-right: .2rem;
+      background-color: $avalara-light-gray;
+      border: none;
+      &:hover {
+        background-color: $avalara-light-gray;
+        color: scale-color($avalara-alert-red, $lightness: 50);
+      }
+    }
+  }
+
+  .option-with-description {
+    & > span {
+      display: block;
+
+      &.option-description {
+        font-style:italic;
+      }
+    }
+
+  }
+}

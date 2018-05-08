@@ -1,0 +1,9 @@
+.accounting-line-item {
+
+  &.is-negative {
+    .money {
+      // don't let ember generated white space add extra padding to the parens
+      display: inline-block;
+    }
+  }
+}

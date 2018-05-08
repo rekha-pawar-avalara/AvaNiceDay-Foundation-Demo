@@ -1,0 +1,116 @@
+.alert-box {
+  font-size: 1rem;
+  left: 48%;
+  margin-left: -190px;
+  padding: 1rem 1.84615rem 1rem 1rem;
+  position: fixed;
+  top: 40px;
+  width: 460px;
+  z-index: 1006;
+  .alert-box-header {
+    margin-bottom: 5px;
+  }
+
+  &.warning {
+    background: $avalara-warning-color;
+    color: $avalara-mediumdark-gray;
+    border-color: $avalara-lighter-gray;
+
+    h2, h3, h4 {
+      color: $avalara-mediumdark-gray;
+    }
+
+    .button-icon a.label-icon-link i {
+      color: $avalara-mediumdark-gray;
+
+      &:hover {
+        color: $avalara-mediumdark-gray;
+      }
+    }
+
+    a {
+      color: $avalara-dark-gray;
+      &:hover {
+        color: $avalara-dark-gray;
+      }
+    }
+  }
+
+  &.alert, &.error {
+    background: $avalara-alert-red;
+    border-color: $avalara-light-gray;
+
+    h2, h3, h4 {
+      color: #FFF;
+    }
+
+    .button-icon a.label-icon-link i {
+      color: #FFF;
+
+      &:hover {
+        color: #FFF;
+      }
+    }
+
+    a {
+      &:hover {
+        color: #FFF;
+      }
+    }
+ }
+
+   a {
+     color: #FFF;
+     &:hover {
+       color: $avalara-dark-orange;
+     }
+   }
+
+  &.alert {
+    border-color: $avalara-light-gray;
+  }
+
+  &.success {
+    border-color: $avalara-light-gray;
+
+    h3 {
+      color: #FFF;
+    }
+
+    background: $avalara-medium-green;
+  }
+
+  // trash the competing Foundation alert box block positioning
+  &.hide {
+    display: none;
+  }
+
+  ul{
+    margin-bottom: 0;
+    list-style: none;
+
+    &.bulleted {
+      list-style: inherit;
+    }
+  }
+  p:nth-of-type(n+1) {
+    margin-top: 1rem;
+    margin-bottom:1rem;
+
+    // unordered lists inside paragraphs should use paragraph spacing
+    ul li {
+      margin-top: 1rem;
+      margin-bottom:1rem;
+    }
+  }
+
+  .close {
+    padding: 6px 1px 6px;
+    text-decoration: none;
+  }
+
+
+  a {
+    text-decoration: underline;
+  }
+}

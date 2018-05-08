@@ -1,0 +1,83 @@
+$subFooterContentHeight: 25rem;
+$subFooterPadding: 1.5rem;
+$subFooterAbsoluteSpacing: $subFooterContentHeight + 2* $subFooterPadding;
+
+.upload-manager {
+  position: relative;
+
+  .drag-and-drop-zone {
+    float: left;
+    width: 100%;
+    border: 3px dashed $avalara-light-gray;
+    padding: 2rem 2rem 2rem 2rem;
+    text-align: center;
+
+    h3 {
+      color: $avalara-medium-gray;
+      font-size: 4rem;
+    }
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  .upload-result {
+    font-size: 90%;
+  }
+
+  .message, .file_messages p {
+    font-size: 90%;
+    margin-bottom: 20px;
+  }
+
+  .file-label {
+    text-align: left;
+  }
+
+  .fileinput-button {
+    color: $avalara-light-blue;
+    overflow: hidden;
+    position: relative;
+    vertical-align: bottom;
+
+    input {
+      cursor: pointer;
+      direction: ltr;
+      font-size: 23px;
+      margin: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translate(-300px, 0px) scale(4);
+    }
+  }
+
+  .progress {
+    border: none;
+    margin: 0 auto;
+    position: relative;
+
+    .message {
+      .error {
+        color: #BD362F;
+      }
+
+      .done {
+        color: #57ba48;
+      }
+    }
+
+    .bar {
+      height: 1.5625em;
+      position: absolute;
+    }
+
+    .progress-label {
+      font-size: 10px;
+      position: absolute;
+      color: #FFF;
+      margin: .7em;
+    }
+  }
+}

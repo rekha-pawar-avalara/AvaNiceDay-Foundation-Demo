@@ -1,0 +1,43 @@
+// Icon-only buttons
+
+@mixin icon-button($padding, $bg, $radius: false, $full-width: false, $disabled: false, $is-prefix: false) {
+  @include button-base($style: false);
+  @include button-size($padding, false);
+  @include button-style($bg, $button-radius, $disabled, $bg-hover:$primary-color);
+  background-color: transparent;
+  border: none;
+  color: $secondary-color;
+  cursor: pointer;
+  height: rem-calc(22);
+  font-size: rem-calc(21);
+  margin: rem-calc(2) 0 0.3rem 0;
+  position: relative;
+  text-decoration: none;
+}
+
+button.icon-button {
+  @include icon-button(rem-calc(9), false, false, false, false, false);
+}
+
+button span {
+  font-family: $body-font-family;
+  margin-left: .2em;
+}
+
+button.icon-button:hover {
+  color: $primary-color;
+}
+
+button.icon-button:before {
+  left: rem-calc(8);
+  position: absolute;
+  top: rem-calc(4);
+}
+
+button.icon-button.is-disabled {
+  cursor: default;
+  color: $avalara-light-gray;
+  &:before {
+    color: $avalara-light-gray;
+  }
+}

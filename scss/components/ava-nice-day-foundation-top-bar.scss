@@ -1,0 +1,185 @@
+@import "ava-nice-day-foundation";
+
+
+.header-container {
+  background-color: $avalara-lightest-gray;
+}
+
+.top-bar {
+  ul.title-area {
+    left: $av-gutter-half;
+    position: absolute;
+    top: 10px;
+
+    li {
+      img {
+        height: rem-calc(22);
+      }
+    }
+  }
+
+  .top-bar-section {
+    margin-top: $topbar-height;
+
+    ul li {
+      background: transparent;
+
+      a:after {
+        display: none;
+      }
+    }
+  }
+
+  @media #{$topbar-media-query} {
+    height: $topbar-height;
+
+    ul.title-area {
+      width: auto;
+    }
+
+    .top-bar-section {
+      margin-top: inherit;
+
+      ul.right {
+        padding-right: 1.15385rem;
+      }
+
+      ul.right,
+      ul.left {
+        li {
+          a, span {
+            line-height: 15px;
+            background-color: $avalara-lightest-gray;
+            font-family: $body-font-family;
+            padding: 0 0 0 1.5rem;
+          }
+
+          a {
+            &:hover {
+              background-color: $avalara-lightest-gray;
+            }
+
+            &.active {
+              color: $avalara-dark-orange;
+              font-weight: bold;
+            }
+          }
+
+          &.has-dropdown {
+            position: relative;
+
+            a:first-of-type {
+              z-index: 5;
+            }
+
+            > a, span {
+              padding: 13px 0 13px 20px !important;
+              white-space: nowrap;
+
+              margin-left: 0;
+              font-weight: normal;
+
+              &.menu-button {
+                background-color: $avalara-light-gray;
+                padding-left: 20px;
+                padding-right: 20px!important;
+              }
+
+              &.width-limited {
+                max-width: 20rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+            }
+
+            ul.dropdown {
+              padding: 1.5rem 0;
+              background-color: $avalara-lightest-gray;
+              border: thin solid $avalara-lighter-gray;
+              border-bottom-color: $avalara-medium-gray;
+              border-top-color: $avalara-lightest-gray;
+              min-width: 160px;
+              position: absolute;
+              top: 42px;
+              right: 0;
+
+              li {
+
+                &.has-button {
+                  text-align:center;
+                  padding: 0 2rem;
+                  margin-bottom: 1rem;
+
+                  .square-button {
+                    width: 100%;
+                    background-color: $avalara-dark-blue;
+                    border-color: $avalara-dark-blue;
+                    display: inline-block;
+                    font-weight: 300;
+                    padding: 6px 3px;
+                    color: #FFF;
+
+                    &:hover {
+                      background-color: $avalara-light-blue;
+                      border-color: $avalara-light-blue;
+                    }
+
+                    &.active {
+                      background-color: $avalara-lightest-blue;
+                      border-color: $avalara-lightest-blue;
+                    }
+
+                    &.disabled {
+                      border: 1px $avalara-disabled-gray solid;
+                      background-color: $avalara-disabled-gray;
+                      color: $avalara-disabled-gray;
+                    }
+
+                    &.empty {
+                      background-color: $avalara-white;
+                      color: $avalara-dark-blue;
+                    }
+                  }
+                }
+
+                a {
+                  background-color: $avalara-lightest-gray;
+                  font-weight: 300;
+                  line-height: 1rem;
+                  padding: 0.5rem 28px;
+
+                  &:hover {
+                    background-color: $avalara-lightest-gray;
+
+                  }
+
+                  &.active {
+                    color: $avalara-dark-orange;
+                  }
+                }
+
+                img.logo {
+                  height: 1rem;
+                  margin-right: 0.5rem;
+                  vertical-align: baseline;
+                }
+
+                label {
+                  background-color: #fff;
+                  border-bottom: 1px solid $avalara-light-gray;
+                  color: $avalara-mediumdark-gray;
+                  font-weight: normal;
+                  letter-spacing: 0.07em;
+                  margin: 0.5rem 19px;
+                  padding-bottom: 0;
+                  padding-left: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    } // .top-bar-section
+  } // media query
+} // .top-bar

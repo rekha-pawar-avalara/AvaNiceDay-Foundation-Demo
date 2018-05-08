@@ -1,0 +1,410 @@
+.region-summary {
+  .row-expander {
+    float: left;
+    margin-top: 33px;
+
+    &.expanded {
+      border-left: none;
+    }
+  }
+
+  .schedule-wrap {
+    border-bottom: 1px solid $avalara-light-gray;
+    border-top: 1px solid $avalara-light-gray;
+    margin-bottom: 20px;
+    margin-left: 30px;
+
+    .schedule-data {
+      margin-bottom: 0;
+      text-align: right;
+
+      li:first-of-type {
+        margin-left: 0;
+      }
+    }
+
+    .summary,
+    .child-inner {
+      background-color: $avalara-lightest-gray;
+      border: 3px solid #fff;
+      border-left-width: 0;
+      border-right: none;
+      margin-left: auto;
+      margin-right: auto;
+      min-height: 85px;
+      padding-bottom: 15px;
+      padding-top: 15px;
+      position: relative;
+
+      h3 {
+        margin: 0;
+      }
+
+      h4 {
+        font-size: 1rem;
+      }
+
+      label {
+        margin-top: 4px;
+      }
+
+      .message {
+        bottom: 5px;
+        left: 0;
+        margin-left: 0;
+        position: absolute;
+      }
+
+      .collected-item {
+        min-width: 15%;
+        position: absolute;
+        right: 58.6%;
+        top: 15px;
+      }
+
+      .sales-item {
+        min-width: 15%;
+        position: absolute;
+        right: 43.3%;
+        top: 15px;
+      }
+
+      .due-item {
+        min-width: 15%;
+        position: absolute;
+        right: 28%;
+        top: 15px;
+      }
+
+      .return-actions {
+        min-width: 24%;
+        position: absolute;
+        right: 0;
+        text-align: left;
+
+        a {
+          display: inline-block;
+          margin-bottom: 0;
+
+          &.right-piped {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+
+    .summary {
+      .message {
+        bottom: 16px;
+      }
+
+      .tax-collected {
+        font-size: 150%;
+      }
+
+      .total-sales,
+      .amount-due {
+        margin-top: 11px;
+      }
+
+      .return-actions {
+        top: 25%;
+
+        .success {
+          margin-top: 10px;
+        }
+      }
+
+      .approve-notice {
+        span.status-circle {
+          vertical-align: top;
+          color: $avalara-dark-blue;
+
+          i{
+            float: left;
+            margin-top: -2px;
+
+            &:before {
+              font-size: 140%;
+              padding-right: 5px;
+            }
+          }
+
+          &.success {
+            color: $avalara-light-green;
+          }
+
+          &.disabled {
+            color: $avalara-disabled-gray;
+          }
+        }
+      }
+    }
+
+    .child-outer {
+      border-bottom: 1px solid $avalara-light-gray;
+      border-top: 1px solid $avalara-light-gray;
+      margin-bottom: 10px;
+      margin-left: 30px;
+
+      .child-inner {
+        min-height: 55px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+      }
+
+      .collected-item {
+        right: 60.5%;
+        top: 9px;
+      }
+
+      .sales-item {
+        right: 44.7%;
+        top: 9px;
+      }
+
+      .due-item {
+        right: 29%;
+        top: 9px;
+      }
+
+      .return-actions {
+        top: 22%;
+      }
+
+      &.schedule {
+        border-top: none;
+        margin-bottom: 0;
+        margin-left: 60px;
+
+        .child-inner {
+          background-color: $avalara-white;
+          margin-bottom: 0;
+          min-height: 35px;
+
+          &.has-message {
+            min-height: 55px;
+          }
+        }
+
+        .collected-item {
+          right: 62.4%;
+          top: 7px;
+        }
+
+        .sales-item {
+          right: 46.2%;
+          top: 7px;
+        }
+
+        .due-item {
+          right: 29.9%;
+          top: 7px;
+        }
+
+        .return-actions {
+          top: 6px;
+        }
+      }
+    }
+  }
+
+  .schedules {
+    margin-top: -10px;
+
+    .filing-configuration:last-of-type {
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+  }
+
+/* Manages the color indicators */
+
+  .can-approve.summary:before,
+  .can-approve .child-inner:before,
+  .warning.summary:before,
+  .warning .child-inner:before,
+  .alert.summary:before,
+  .alert .child-inner:before {
+    content: '!';
+    display: block;
+    height: 100%;
+    position: absolute;
+    left: -12px;
+    top: 0;
+    width: 8px;
+  }
+
+  .can-approve.summary,
+  .can-approve .child-inner,
+  .warning.summary,
+  .warning .child-inner,
+  .alert.summary,
+  .alert .child-inner {
+    border-left-width: 12px;
+  }
+
+  .summary,
+  .child-inner,
+  .can-approve.summary,
+  .can-approve .child-inner {
+    padding-left: 10px;
+
+    .message {
+      padding-left: 10px;
+
+      &.warning {
+        color: $avalara-warning-text-color;
+      }
+
+      &.alert {
+        color: $avalara-alert-red;
+      }
+    }
+  }
+
+  .warning.summary,
+  .warning .child-inner,
+  .alert.summary,
+  .alert .child-inner {
+    padding-left: 40px;
+
+    .message {
+      padding-left: 40px;
+    }
+  }
+
+  .can-approve.summary:before,
+  .can-approve .child-inner:before {
+    background-color: $avalara-verylightest-blue;
+    color: $avalara-verylightest-blue;
+  }
+
+  .warning.summary:before,
+  .warning .child-inner:before {
+    background-color: $avalara-warning-color;
+    color: $avalara-warning-color;
+  }
+
+  .region-alert.summary:before,
+  .alert.summary:before,
+  .alert .child-inner:before {
+    background-color: $avalara-alert-red;
+    color: $avalara-alert-red;
+  }
+
+  .warning.summary:after,
+  .warning .child-inner:after,
+  .alert.summary:after,
+  .alert .child-inner:after {
+    content: '\e803';
+    font-family: 'icomoon';
+    font-size: 250%;
+    left: 0;
+    position: absolute;
+    top: 14px;
+  }
+
+  .warning.summary:after,
+  .warning .child-inner:after {
+    color: $avalara-warning-color;
+  }
+
+  .region-alert.summary:after,
+  .alert.summary:after,
+  .alert .child-inner:after {
+    color: $avalara-alert-red;
+  }
+
+  .schedule.warning .child-inner {
+    min-height: 55px !important;
+  }
+
+  /* table-like relative alignment adjustments */
+  .can-approve.summary {
+    .collected-item {
+      right: 59.5%;
+    }
+
+    .sales-item {
+      right: 43.7%;
+    }
+
+    .due-item {
+      right: 28.4%;
+    }
+  }
+
+  .can-approve .child-inner {
+    .collected-item {
+      right: 62.5%;
+    }
+
+    .sales-item {
+      right: 44.5%;
+    }
+
+    .due-item {
+      right: 29.2%;
+    }
+  }
+
+  .can-approve.schedule {
+    .collected-item {
+      right: 64.4% !important;
+    }
+
+    .sales-item {
+      right: 45.5%;
+    }
+
+    .due-item {
+      right: 30.2% !important;
+    }
+  }
+
+  .warning.summary,
+  .alert.summary {
+    .collected-item {
+      right: 59.5%;
+    }
+
+    .sales-item {
+      right: 43.5%;
+    }
+
+    .due-item {
+      right: 28.4%;
+    }
+  }
+
+  .warning .child-inner,
+  .alert .child-inner {
+    .collected-item {
+      right: 61.5%;
+    }
+
+    .sales-item {
+      right: 44.6%;
+    }
+
+    .due-item {
+      right: 29.3%;
+    }
+  }
+
+  .warning.schedule,
+  .alert.schedule {
+    .collected-item {
+      right: 64.4% !important;
+    }
+
+    .sales-item {
+      right: 46% !important;
+    }
+
+    .due-item {
+      right: 30% !important;
+    }
+  }
+}

@@ -1,0 +1,204 @@
+@import 'local-fonts';
+@import 'avalara-palette';
+@import 'foundation-default-theme';
+
+// Grid
+
+// based on CUP's flush-edge design, gives appearance of 1020 max-width;
+$row-width: rem-calc(1050);
+
+// Spacing
+// column gutter is 30px
+$av-gutter: $column-gutter;
+$av-gutter-half: ($av-gutter/2);
+$av-gutter-quarter: ($av-gutter/4);
+$av-gutter-eighth: ($av-gutter/8);
+
+// We use these to control various global styles
+$body-font-color: $avalara-dark-gray;
+//$body-font-family: $openSansFont, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $body-font-weight: normal;
+// $body-font-style: normal;
+
+// We use these as default colors throughout
+$primary-color: $avalara-dark-orange;
+//this light blue is used to color links
+$secondary-color: $avalara-dark-blue;
+$alert-color: $avalara-alert-red;
+$success-color: $avalara-medium-green;
+// $warning-color: #f08a24;
+// $info-color: #a0d3e8;
+
+//
+// Top Bar Variables
+//
+$topbar-media-query: "only screen and (min-width : 408px)";
+
+
+// Background color for the top bar
+$topbar-bg: $avalara-lightest-gray;
+$topbar-height: rem-calc(43);
+
+//Links
+$topbar-link-font-size: rem-calc(14);
+$topbar-link-color: $secondary-color;
+$topbar-menu-link-color: $secondary-color;
+$topbar-link-color-hover: $primary-color;
+$topbar-link-bg-hover: $topbar-bg;
+$topbar-link-bg-active: $primary-color;
+$topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
+
+$topbar-dropdown-link-color: $avalara-dark-blue;
+$topbar-dropdown-bg: $primary-color;
+$topbar-dropdown-link-bg: $primary-color;
+$topbar-dropdown-link-weight: normal;
+
+$topbar-dropdown-label-color: #fff;
+$topbar-dropdown-label-font-weight: bold;
+$topbar-dropdown-label-font-size: rem-calc(10);
+$topbar-dropdown-label-bg: $primary-color;
+
+// Sub Nav
+
+$sub-nav-list-margin: 0;
+
+// We use this to control the definition
+$sub-nav-font-color: $secondary-color;
+$sub-nav-font-family: $body-font-family;
+$sub-nav-font-weight: normal;
+$sub-nav-text-decoration: none;
+$sub-nav-border-radius: 0px;
+$sub-nav-font-color-hover: $primary-color;
+
+// We use these to control the active item styles
+
+$sub-nav-active-font-weight: bold;
+$sub-nav-active-bg: $primary-color;
+$sub-nav-active-bg-hover: $primary-color;
+
+$input-focus-border-color: $avalara-light-blue;
+
+// Tab bar
+$tabs-navigation-font-size: 1.1rem;
+$tabs-navigation-font-family: $body-font-family;
+
+// Headings
+$header-bottom-margin: 1rem;
+$header-font-color: inherit;
+$header-font-family: inherit;
+
+$h1-font-size: 1.88rem;
+$h2-font-size: 1.64rem;
+$h3-font-size: 1.3rem;
+
+$large-label-font-size: rem-calc(13);
+
+// We use these to style anchors
+$anchor-font-color: $secondary-color;
+$anchor-font-color-hover: $primary-color;
+
+// Default action buttons
+
+$button-font-family: $body-font-family;
+$button-disabled-opacity: 0.7;
+
+// Anchor
+$anchor-active: $primary-color;
+a.active {
+  color: $anchor-active;
+  font-weight: bold;
+}
+
+// <code> element overrides
+
+$code-color: #000;
+$code-font-weight: normal;
+code {
+  background-color: transparent;
+  border: none;
+  font-size: rem-calc(13);
+}
+
+// Reveal (Modal) Overrides
+
+$reveal-border-color: $avalara-light-gray;
+$reveal-border-width: 2px;
+$reveal-close-color: $avalara-light-blue;
+$reveal-close-font-size: rem-calc(20);
+$reveal-default-width: 70%;
+$reveal-overlay-bg: rgba($avalara-medium-gray, .65);
+$reveal-overlay-bg-old: $avalara-medium-gray;
+$reveal-position-top: 80px;
+
+// Alert box overrides
+$alert-font-size: 1.46153rem;
+$alert-border-color: $avalara-light-gray;
+$alert-border-width: 2px;
+$alert-close-color: #fff;
+$alert-close-font-size: 1.46153rem;
+$alert-close-top: 0.76923rem;
+
+// Joyride overrides
+$joyride-tip-bg: #fff;
+$joyride-tip-default-width: 200px;
+$joyride-tip-font-color: $avalara-dark-gray;
+$joyride-tip-close-color: $avalara-light-blue;
+$joyride-tip-close-size: 30px;
+
+
+// Panel overrides
+
+$panel-bg: $avalara-lighter-gray;
+$panel-border-style: none;
+
+// Form overrides
+
+$form-label-font-size: 100%;
+$input-font-size: $large-label-font-size;
+$select-bg-color: #fff;
+$form-label-letterspacing: 0.07rem;
+$input-disabled-bg: #f5f6fa;
+$form-label-top-margin: rem-calc(14);
+
+// Tables overrides
+$table-bg: $avalara-lightest-gray;
+$table-border-color: $avalara-light-gray;
+$table-even-row-bg: $avalara-lightest-gray;
+$table-row-font-color: $avalara-dark-gray;
+$table-row-padding: rem-calc(7 10);
+
+// Breadcrumb overrides
+$crumb-font-color-current: $avalara-dark-gray;
+$crumb-slash-color: #aaa;
+$crumb-slash: ">";
+$crumb-font-size: rem-calc(21);
+$crumb-font-color: $avalara-dark-blue;
+$crumb-font-color-current: $primary-color;
+
+// Paragraph overrides
+$paragraph-line-height: 1.2;
+
+
+.left-piped {
+  position: relative;
+  &:before {
+    content: '';
+    background: $avalara-medium-gray;
+    position: absolute;
+    height: 60%;
+    bottom: 5%;
+    left: 0;
+    width: rem-calc(1);
+  }
+  margin-left: 1.25rem !important;
+  padding-left: 1.25rem !important;
+}
+.right-piped {
+  border-right: 1px solid $avalara-medium-gray;
+  padding-right: 1rem !important;
+}
+
+.hide {
+  display: none;
+}

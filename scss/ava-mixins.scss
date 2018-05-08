@@ -1,0 +1,69 @@
+@mixin transition($transition-property, $transition-time, $method) {
+  -webkit-transition: $transition-property $transition-time $method;
+  -moz-transition: $transition-property $transition-time $method;
+  -ms-transition: $transition-property $transition-time $method;
+  -o-transition: $transition-property $transition-time $method;
+  transition: $transition-property $transition-time $method;
+}
+
+@mixin disabled($darker:$avalara-disabled-gray) {
+  color: $darker;
+  cursor: default !important;
+
+  i {
+    cursor: default;
+  }
+}
+
+// small proof of concept for a more 'flexible' grid
+// and to avoid the use of unecessary tables
+// check filing-summary.scss in cup-client for example - jm
+
+@mixin flex-row (
+  $direction: row,
+  $wrap: nowrap,
+  $justify: flex-start,
+  $align: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-block (
+  $width,
+  $gutter: 10) {
+  padding-left: $gutter+px;
+  padding-right: $gutter+px;
+  flex: 0 1 $width * 65px;
+}
+
+@mixin no-gutter ($side) {
+  @if $side == 'left' {
+    padding-left: 0px;
+  } @else if $side == 'right' {
+    padding-right: 0px;
+  } @else {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@mixin outline (
+  $padding-top: 0,
+  $padding-bottom: 0,
+  $margin-top: 0,
+  $margin-bottom: 0,
+  $background: none) {
+  border-top: 1px solid $avalara-light-gray;
+  border-bottom: 1px solid $avalara-light-gray;
+  padding-top: $padding-top+rem;
+  padding-bottom: $padding-bottom+rem;
+  margin-top: $margin-top+rem;
+  margin-bottom: $margin-bottom+rem;
+
+  @if $background == focus {
+    background-color: $avalara-lightest-gray;
+  }
+}

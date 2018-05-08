@@ -1,0 +1,87 @@
+// Square Gliff buttons
+//
+
+$square-button-height: rem-calc(20);
+
+@mixin square-button($padding, $bg, $radius: false, $full-width: false, $disabled: false, $is-prefix: false) {
+  @include button-base($style: false);
+  @include button-size($padding, false);
+  @include button-style($bg, $button-radius, $disabled);
+  border: none;
+  cursor: pointer;
+  height: $square-button-height;
+  font-size: rem-calc(18);
+  margin: rem-calc(2) rem-calc(8) 0 0;
+  position: relative;
+  text-decoration: none;
+  width: inherit;
+}
+
+button.square-button {
+  @include square-button(rem-calc(9), $avalara-light-blue, $button-radius, false, false, false);
+
+  &.small {
+    height: auto;
+    @include button-size(.5rem, false);
+  }
+
+  font-family: 'icomoon';
+  line-height: 2.42857rem;
+  margin: 0.14286rem 0.57143rem 0 .5rem;
+  border-radius: 0;
+  border: none;
+  padding: 0;
+}
+
+button.square-button.disabled {
+  font-family: 'icomoon';
+  line-height: 2.42857rem;
+  margin: 0.14286rem 0.57143rem 0 .5rem;
+  border-radius: 0;
+  border: none;
+  padding: 0;
+}
+
+button.square-button.inverse {
+  background-color: $avalara-medium-gray;
+  color: $avalara-light-blue;
+}
+
+button.square-button.no-icon {
+  padding-top:0;
+  padding-bottom:0;
+  line-height: 100%;
+  font-size: 2rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+button.square-button:before {
+  left: rem-calc(9);
+  position: absolute;
+  top: rem-calc(3);
+}
+
+a.square-button {
+  @include square-button(rem-calc(2), $avalara-light-blue, $button-radius, false, false, false);
+  border-radius: 0;
+  &.active {
+    background: transparent;
+    font-weight: normal;
+    &:hover {
+      color: $anchor-active;
+    }
+  }
+}
+
+span.square-button {
+  @include square-button(rem-calc(2), $avalara-light-blue, $button-radius, false, false, false);
+  border-radius: 0;
+  &.active {
+    background: transparent;
+    font-weight: normal;
+    &:hover {
+      color: $anchor-active;
+    }
+  }
+}

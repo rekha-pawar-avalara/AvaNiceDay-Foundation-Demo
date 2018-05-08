@@ -1,0 +1,11 @@
+// Avalara special lists
+//
+
+.unbulleted-list {
+  li {
+    margin-left: rem-calc(10);
+    margin-top: rem-calc(4);
+    list-style-type: none;
+  }
+}
+

@@ -1,0 +1,408 @@
+//GENERAL FORMS
+
+//TODO it would be nice if we had a themed style for "sublabels". This should be in the ava-nice-day foundation
+.field-group {
+  //form spacing is a foundation default. It's what usually places margin on the bottom of our inputs
+  margin-bottom: $form-spacing;
+
+  h2, h3, h4, h5, h6 {
+    line-height: 1;
+    margin-bottom: $form-spacing/2;
+  }
+  .sublabel {
+    line-height: 1.2;
+    display:block;
+    margin-bottom: $form-spacing/2;
+  }
+
+  //select's default margin interferes with the field-group margin. Results in double form-spacing
+  select {
+    margin-bottom:0;
+  }
+}
+
+.form-wrap {
+  background-color: $avalara-lighter-gray;
+  ul.inline-list {
+    margin-bottom:0;
+  }
+
+  //both for row forms, and
+  margin-bottom:1rem;
+  &.row {
+    margin-bottom:1rem;
+  }
+}
+
+.validations-summary {
+  padding: 0.5rem 0;
+  color: $alert-color;
+}
+
+//Form labels
+
+label {
+  margin-top: $form-label-top-margin;
+  letter-spacing:  $form-label-letterspacing;
+  color: $avalara-mediumdark-gray;
+  cursor: default;
+  font-size: rem-calc(11);
+  font-weight: normal;
+  margin-bottom: rem-calc(3);
+  text-transform: uppercase;
+  width: initial;
+  white-space: nowrap;
+
+  &.not-uppercase {
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: rem-calc(14);
+    line-height: 1rem;
+  }
+}
+
+
+.form-top-with-border {
+  border-top: 1px solid #e7e7e7;
+  margin-top: 0;
+}
+
+.label-top-with-border {
+  border-top: 1px solid #e7e7e7;
+  margin-top: 0;
+  padding-top: 1.07692rem;
+}
+
+//Form inputs
+.input-container {
+  position: relative;
+
+  //input container takes the margin instead of select
+  margin-bottom: $form-spacing;
+  select {
+    margin-bottom: 0;
+  }
+
+  &.error {
+    select, input[type="text"], input[type="search"] {
+      border-color: $alert-color;
+    }
+    // Override so errors below input & multiselect
+    em.with-error {
+      margin-top: 0;
+    }
+  }
+
+  select + .with-error {
+    margin-top: 0;
+  }
+
+  .with-error {
+    left: 0;
+  }
+}
+
+.action-sheet {
+  margin-top: rem-calc(20);
+  margin-bottom: 0px;
+}
+
+.with-input-left {
+  font-size: 0.84615rem;
+  bottom: -1.23077rem;
+  left: 0;
+  position:absolute;
+}
+
+.with-input-right {
+  font-size: 1rem;
+  bottom: -1.23077rem;
+  margin-bottom: 0;
+  position:absolute;
+  right: 0;
+}
+
+input[type="text"].error,
+input[type="password"].error {
+  border-color: $alert-color;
+}
+
+input[type="search"] {
+  padding-top:0;
+  padding-bottom:0;
+}
+
+em, span {
+  &.with-error {
+    color: $alert-color;
+    font-size: 0.9rem;
+    font-style: normal;
+    line-height: 1.5rem;
+    white-space: nowrap;
+    position: absolute;
+
+    &.wrapping-error {
+      position:relative;
+      white-space:normal;
+      top: (-1*$form-spacing);
+    }
+  }
+}
+
+@mixin placeholder {
+  color: $avalara-medium-gray;
+  font-style: italic;
+  word-spacing: .2em;
+}
+
+::-webkit-input-placeholder {
+  @include placeholder();
+}
+
+:-moz-placeholder {
+  @include placeholder();
+}
+
+::-moz-placeholder {
+  @include placeholder();
+}
+
+:-ms-input-placeholder {
+  @include placeholder();
+}
+
+select {
+  font-size: $rem-base;
+  margin-bottom: $form-spacing;
+}
+
+.shaded-form-focus-area {
+  padding: rem-calc(10) rem-calc(20);
+  background: $avalara-lightest-gray;
+  border-color: $avalara-lightest-gray;
+}
+
+
+//Form button container
+
+.field-group.bottom-separator {
+  border-bottom: 1px solid $avalara-light-gray;
+}
+
+.row {
+  &.field-group {
+    margin-bottom: $av-gutter-half;
+  }
+
+  .action-sheet {
+    clear: both;
+    border-top: 1px solid $avalara-light-gray;
+    margin-top: 1rem;
+    padding-top: 2rem;
+    margin-left: 0;
+
+    &.no-border {
+      border-top: none;
+    }
+
+    li:first-of-type {
+      margin-left: 0;
+    }
+
+    a {
+
+      &.active {
+        font-weight: normal;
+        color: $avalara-dark-blue;
+        margin-left: 1rem;
+
+        // except if its a button
+        &.primary-button {
+          font-weight: bold;
+          color: #FFF;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.required:after {
+  content: '*';
+  color: $avalara-dark-orange;
+  margin-left: 1px;
+  position: absolute;
+  line-height: 1;
+  font-size: 1.2rem;
+}
+
+p {
+  &.information {
+    margin-top: 1em;
+    padding-left: 18px;
+    position: relative;
+    i {
+      &.icon-exclamation {
+        font-size: rem-calc(26);
+        left: -9px;
+        position: absolute;
+        top: 3px;
+      }
+    }
+  }
+  &.readonly {
+    @include form-element;
+    border: 1px solid transparent;
+    background-color: transparent;
+    box-shadow: none;
+    text-transform: none;
+  }
+}
+
+// Display data that needs to sit inline with neighboring
+// form inputs that contain text
+
+.display-only {
+   margin-top: 0.5rem;
+}
+
+span.highlight-field,
+.active-highlight {
+  background-color: #fafff6;
+}
+
+.numeric, input[type="number"] {
+  text-align: right;
+}
+
+// Typical buttons
+$button-font-weight: bold;
+
+button, .button, a.button, input[type="submit"].button {
+  @include button(rem-calc(6), $avalara-dark-blue, $button-round, false, false, false);
+
+  // Primary buttons need 18px L/R padding
+
+  padding-left: rem-calc(18);
+  padding-right: rem-calc(18);
+
+  + a {
+    // spec says 14px, but rem-calc(14) results in 19px gap
+    margin-left: rem-calc(8);
+  }
+
+  &[class^="icon-"], &[class*=" icon-"] {
+    font-family: 'icomoon';
+  }
+
+
+
+  &.button-processing {
+    .button-text {
+      visibility: hidden;
+    }
+  }
+
+  &:active {
+    background-color: #54b6cc;
+    border-color: #54b6cc;
+  }
+
+  .loading-spinner {
+    width: 1.5em;
+    position: absolute;
+    left: 50%;
+    margin-left: -.75em;
+    top: 50%;
+    margin-top: -.75em;
+    padding-top: .6rem;
+  }
+}
+
+button.disabled, button[disabled], .button.disabled {
+  @include button(rem-calc(6), $avalara-disabled-gray, $button-round, false, false, false);
+  cursor: default;
+  color: #fff;
+  &:hover {
+    color: #fff;
+  }
+  &:active {
+    border-color: $avalara-disabled-gray;
+  }
+
+}
+
+
+// Secondary button
+button, .button {
+
+  &.secondary-action {
+    //transitions look really bad on secondary buttons, disabling for now
+    transition: none;
+
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    padding: rem-calc(7) rem-calc(14);
+    font-weight: normal;
+  }
+}
+
+
+// Actions list
+.action-list {
+  li {
+    &:not(:first-child) {
+      margin-left: 14px;
+    }
+
+    > * {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+  }
+}
+
+// Row of submit / cancel buttons
+.submit-row {
+
+  ul.inline-list {
+    margin-bottom: 0;
+
+    li.non-input {
+      // we want contents to be inline with inputs
+      margin-top: $form-label-top-margin + rem-calc(1.5 *  14);
+      padding: 0.61538rem;
+      line-height: 1.5 * $input-font-size;
+    }
+  }
+  // unsup IE8
+  li:not(:first-child) {
+    margin-left: 14px;
+  }
+
+  &.padded-submit-row {
+    border-top: 1px solid $avalara-light-gray;
+    margin-top: rem-calc(40);
+    padding-top: rem-calc(30);
+  }
+}
+
+// E.g. cancel button within a button submit-row
+
+.link-button {
+  display: inline-block;
+  padding-top: rem-calc(8);
+  &.secondary-link-button {
+    padding-top: rem-calc(8);
+  }
+}
+
+// Remove focus outline from buttons
+
+button, .button {
+  &:focus {
+    outline: none;
+  }
+}

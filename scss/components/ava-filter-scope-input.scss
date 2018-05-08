@@ -1,0 +1,43 @@
+@import "avalara-palette";
+
+.filter-scope-search-form {
+  label {
+    margin-top: 0;
+  }
+
+  input[type="search"] {
+    margin-bottom: 0 !important;
+    box-sizing: border-box;
+  }
+
+  select {
+    margin-bottom: 0 !important;
+    font-size: 1rem;
+    padding-bottom: 0;
+    padding-top: 0;
+    background-color: $avalara-verylightest-blue;
+  }
+
+  .clear-link {
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    margin-top: -.5rem;
+    line-height: 1rem;
+    font-size:.85em;
+  }
+
+  .label-icon-link {
+    line-height: 2.5rem;
+  }
+
+  .search-btn {
+    display: inline-block;
+    margin-top: .1rem;
+
+    i {
+      height: 2.4rem;
+      width: 2.5rem;
+    }
+  }
+}

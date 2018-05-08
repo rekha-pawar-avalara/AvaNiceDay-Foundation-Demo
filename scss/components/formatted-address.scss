@@ -1,0 +1,13 @@
+.formatted-address {
+
+  &.condensed {
+    .address-line {
+      display: inline;
+    }
+  }
+
+  .address-line {
+    display:block;
+  }
+
+}

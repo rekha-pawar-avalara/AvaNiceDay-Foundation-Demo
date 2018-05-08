@@ -1,0 +1,358 @@
+// General tables
+tbody {
+  &:first-of-type {
+    tr:first-of-type {
+      border-top: 1px solid #ddd;
+    }
+  }
+}
+
+// css field truncation
+.truncated-field {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+p.item-count {
+  color: #72767e;
+  font-weight: 300;
+  margin: 8px 0 0;
+  padding: 10px 0;
+}
+
+.x-of-y-count {
+  color: $avalara-mediumdark-gray;
+  font-size: 1rem;
+}
+
+.cup-grid {
+  border: none;
+  border-bottom: 1px solid $avalara-disabled-gray;
+  border-top: 1px solid $avalara-light-gray;
+  border-collapse: separate;
+  width: 100%;
+  color: $avalara-medium-gray;
+  thead {
+    background-color: #fff;
+  }
+  th,
+  td {
+    &.first-cell-content {
+      padding-left: 1.5rem;
+    }
+  }
+  th {
+    border-bottom: 1px solid $avalara-light-gray;
+    color: $avalara-mediumdark-gray;
+    font-size: rem-calc(11);
+    font-weight: normal;
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 0.07em;
+    vertical-align: bottom;
+    &.current-sort {
+      color: $anchor-font-color;
+    }
+    .sort-indicator {
+      float: right;
+      display: inline-block;
+      margin: rem-calc(5) rem-calc(10);
+    }
+    &.two-line-header {
+      line-height: 1.5;
+    }
+    &.grid-line-actions {
+      padding-left: 1.5rem;
+      width: 95px;
+    }
+    &.balance {
+      text-align: right;
+    }
+  }
+  td {
+    vertical-align: middle;
+    line-height: 2rem;
+    border-bottom: 1px solid $avalara-disabled-gray;
+    border-top: 6px solid #fff;
+    &.balance {
+      text-align: right;
+    }
+    &.multi-actions {
+      button.icon-button {
+        vertical-align: top;
+        margin: 0 0 0 1rem;
+        padding: 0;
+        &:before {
+          top: 2px;
+        }
+      }
+    }
+  }
+
+  a {
+    &.stealth-link {
+      text-decoration: none;
+      color: inherit;
+    }
+    &.button {
+      margin: 0 0 0 0;
+    }
+  }
+
+  td.empty-placeholder {
+    @extend .x-of-y-count;
+    text-align: center;
+  }
+  tbody {
+    &.alert {
+      td:first-of-type:before {
+        background: $avalara-alert-red;
+        width: 6px;
+      }
+    }
+
+    &.warning {
+      td:first-of-type:before {
+        background: $avalara-warning-color;
+        width: 6px;
+      }
+    }
+
+    &:last-of-type {
+      tr:last-of-type {
+        td {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  tr {
+    &:first-of-type {
+      td {
+        border-top: none;
+      }
+    }
+  }
+
+  tr {
+    &.has-condition {
+      background-color: $white;
+      div.has-condition {
+        float: left;
+      }
+
+      td {
+        color: $avalara-alert-red;
+        padding-left: 25px;
+        margin-left: 25px;
+      }
+    }
+  }
+
+  tr.editing-mode.has-condition {
+    .alert.info-second-row {
+      left: 0;
+    }
+
+    .warning.info-second-row {
+      left: 0;
+    }
+  }
+
+  input {
+    margin-bottom: 0;
+  }
+  .indicator {
+    text-align: center;
+  }
+  .inline-list.inline-list-actions {
+    margin: 0 0 0 -1.5rem;
+  }
+
+  &.progressive-table {
+    table-layout: fixed;
+    margin: 0;
+    border-bottom: none;
+    border-top: none;
+
+    &:first-of-type {
+      border-top: 1px solid $avalara-light-gray;
+    }
+    &:last-of-type {
+      border-bottom: 1px solid $avalara-light-gray;
+    }
+  }
+
+  &.panel {
+    background-color: $avalara-lightest-gray;
+    border: thin solid $avalara-lighter-gray;
+    border-bottom-color: $avalara-medium-gray;
+    border-top-color: $avalara-lightest-gray;
+
+    @media #{$topbar-media-query} {
+      min-height: 161px;
+      padding-top: 0;
+
+      i {
+        display: inline-block;
+        padding-right: 0.5rem;
+        padding-top: 1.2rem;
+      }
+    }
+
+    h2 {
+      color: $avalara-lighterMediumDark-gray;
+      font-size: $h2-font-size; // to avoid getting smaller in mobile version
+    }
+
+    @mixin before {
+      width: 8px;
+      content: ' ';
+      height: rem-calc(190);
+      position: absolute;
+      padding-left: 0;
+    }
+    &.alert, &.warning {
+      padding-left: 0;
+    }
+    &.alert:before {
+      background: $avalara-alert-red;
+      @include before();
+    }
+
+    &.warning:before {
+      background: $avalara-warning-color;
+      @include before();
+    }
+
+    .left {
+      float: left;
+      background-color: $avalara-lightest-gray;
+      display: inline-block;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .right {
+      float: right;
+      background-color: $avalara-lightest-gray;
+      display: inline-block;
+      height: 100%;
+      width: 20%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  td {
+    vertical-align: middle;
+    position: relative;
+
+    .icon-trash {
+      &:before {
+        font-size: 130%;
+        margin-top: 0;
+        top:0;
+      }
+    }
+
+    label {
+      padding-left: 25px;
+      margin-left: 25px;
+    }
+
+    @mixin rowLeftRectangleIndicator() {
+      content: ' ';
+      float:left;
+      height: 100%;
+
+      left: 0;
+      top: 0;
+
+      width: 8px;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+    }
+
+    @mixin rowMessage-secondRowIndicator() {
+      @include rowLeftRectangleIndicator();
+      $spaceBetweenRow: 7px;
+      height: calc(100% + #{$spaceBetweenRow});
+      top: -$spaceBetweenRow;
+    }
+
+    @mixin messageSecondRowContent() {
+      color: $avalara-dark-gray;
+      background-color: white;
+      p:first-of-type {             // title p color
+        color: $avalara-alert-red;
+        padding-left: 12px;
+      }
+      &:first-of-type:before {
+        @include rowMessage-secondRowIndicator();
+      }
+      &.has-condition {
+        color: $avalara-alert-red;
+      }
+    }
+
+    &.alert, &.warning {
+      span {
+        padding-left: 12px;
+      }
+    }
+
+    &.alert:first-of-type:before {
+      @include rowLeftRectangleIndicator();
+      background-color: $avalara-alert-red;
+    }
+    &.alert.info-second-row {
+      @include messageSecondRowContent();
+      i[class^="icon"] {
+        color: $avalara-alert-red;
+      }
+
+      left: -.1rem;
+    }
+
+    &.warning:first-of-type:before {
+      @include rowLeftRectangleIndicator();
+      background-color: $avalara-warning-color;
+    }
+    &.warning.info-second-row {
+      @include messageSecondRowContent();
+      i[class^="icon"] {
+        color: $avalara-warning-color;
+      }
+
+      left: -.1rem;
+    }
+  }
+}
+
+td.no-results, div.no-results {
+  background-color: #FFF;
+  border-bottom: none;
+
+  p {
+    color: #72767e;
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    &.no-results-banner {
+      margin: 0.2rem 0 0.2rem 0;
+      line-height: 3.5rem;
+      font-size: 3rem;
+      color: $avalara-light-gray;
+    }
+    &.with-border {
+      border-top: 1px solid $avalara-light-gray;
+      border-bottom: 1px solid $avalara-light-gray;
+      margin-bottom: rem-calc(20);
+    }
+  }
+}

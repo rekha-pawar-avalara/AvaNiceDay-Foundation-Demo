@@ -1,0 +1,56 @@
+@import "avalara-palette";
+
+.error-page {
+  background-color: $avalara-white;
+  margin: 1rem 0;
+  padding: 13px 24px 24px 24px;
+
+  h1 {
+    color: $avalara-dark-orange;
+    font-size: 2.30769rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+  }
+
+  p {
+    &.smaller {
+      font-size: 0.84615rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &.bigger {
+      font-size: 1.38461rem;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  a {
+    &.underlined {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      color: $avalara-white;
+    }
+  }
+
+  .icon-drop_arrow {
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 1rem;
+    font-size: 2rem;
+    height: 2rem;
+    margin: 0 auto;
+    width: 2rem;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    /* Old Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  }
+
+  .centered {
+    text-align: center;
+  }
+}

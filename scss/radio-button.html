@@ -1,0 +1,84 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    </head>
+<body>
+
+        
+        <div>
+                <label class="radio-container">
+                  <input type="radio" value="NoAccess" name=1 checked>
+                  <span class="description">No access</span>
+                </label>&nbsp;&nbsp;
+                <label class="radio-container">
+                  <input type="radio" value="User" name=1>
+                  <span class="description">Read-only access</span>
+                </label>&nbsp;&nbsp;
+                <label class="radio-container">
+                  <input type="radio" value="Admin" name=1>
+                  <span class="description">Administrator</span>
+                </label>
+        </div>
+
+
+
+        <ul class="inline-list">
+                <li>
+                  <label class="radio-container">
+                    <input name="EcmsCertUse" type="radio" value="2">
+                    <span class="description">
+                      Require an exemption certificate record and ignore invoice information
+                        <span class="append-notice">&nbsp;&nbsp;Recommended</span>
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label class="radio-container">
+                    <input name="EcmsCertUse" type="radio" value="1">
+                    <span class="description">
+                      If there's a certificate record, use the certificate instead of invoice information
+                   </span>
+                  </label>
+                </li>
+                <li>
+                  <label class="radio-container">
+                    <input name="EcmsCertUse" type="radio" value="0">
+                    <span class="description">
+                      Always exempt by invoice information, ignore certificate records
+                 </span>
+                  </label>
+                </li>
+        </ul><br>
+
+
+
+        
+        
+        <div>
+                <label class="radio-container">
+                  <input type="radio" value="NoAccess" name=1 disabled>
+                  <span class="description">No access</span>
+                </label>&nbsp;&nbsp;
+                <label class="radio-container">
+                  <input type="radio" value="User" name=1 disabled checked>
+                  <span class="description">Read-only access</span>
+                </label>&nbsp;&nbsp;
+                <label class="radio-container">
+                  <input type="radio" value="Admin" name=1 disabled>
+                  <span class="description">Administrator</span>
+                </label>
+        </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

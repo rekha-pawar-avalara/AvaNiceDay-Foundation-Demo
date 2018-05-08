@@ -1,0 +1,65 @@
+@import "avalara-palette";
+@import "foundation-default-theme";
+.joyride-close-tip {
+  position: absolute;
+  #{$opposite-direction}: 8px;
+  top: 6px;
+
+  //foundation hardcoded #eee as the hover over state
+  //for x, but then set it as important. Why?
+  &:hover,
+  &:focus { color: $avalara-lightest-blue !important;}
+
+}
+
+.joyride-tip-guide {
+  border: $avalara-medium-gray 2px solid;
+  border-radius: 2px;
+
+  .joyride-nub {
+
+    &.bottom {
+      left: 19px;
+    }
+
+    &.right {
+      top: 19px;
+    }
+
+    &.top {
+      left: 19px;
+    }
+
+    &.shadow-nub {
+      border-color: $avalara-medium-gray;
+      border: ($joyride-tip-nub-size + 3) solid $avalara-medium-gray;
+
+      &.top {
+        top: -26px;
+        left: 16px;
+      }
+
+      &.bottom {
+        bottom: -26px;
+        left: 16px;
+
+        //Foundation made me do it.. forgive me
+        border-color: $avalara-medium-gray !important;
+        border-bottom-color: transparent !important;
+        border-left-color: transparent !important;
+        border-right-color: transparent !important;
+      }
+
+      &.right {
+        right: -26px;
+        top: 16px;
+
+        //Foundation made me do it.. forgive me
+        border-color: $avalara-medium-gray !important;
+        border-top-color: transparent !important;
+        border-right-color: transparent !important;
+        border-bottom-color: transparent !important;
+      }
+    }
+  }
+}

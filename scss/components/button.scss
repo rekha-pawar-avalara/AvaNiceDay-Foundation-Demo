@@ -1,0 +1,29 @@
+// Icon-only buttons
+
+.button {
+  font-size: 1rem;
+  &.empty, &.secondary-action.empty {
+    background-color: transparent;
+    transition: background-color 300ms ease-out;
+    color: $avalara-dark-blue;
+    border: 2px $avalara-dark-blue solid;
+    font-weight: normal;
+
+    &.disabled {
+      border: 2px $avalara-disabled-gray solid;
+      color: $avalara-disabled-gray;
+      &:hover {
+        background-color: transparent;
+        color: $avalara-disabled-gray;
+      }
+    }
+
+    &:hover {
+      background-color: #FFF;
+      color: $avalara-dark-blue;
+    }
+    &:active {
+      background-color: #FFF;
+    }
+  }
+}

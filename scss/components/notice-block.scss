@@ -1,0 +1,43 @@
+.notice-block {
+  border-bottom: 1px solid $avalara-light-gray;
+  border-top: 1px solid $avalara-light-gray;
+  margin-bottom: 20px;
+
+  .notice-block-inner {
+    background-color: $avalara-lightest-gray;
+    border: 3px solid #fff;
+    border-left-width: 12px;
+    border-right: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    position: relative;
+  }
+
+  .warning:before,
+  .alert:before {
+    content: '!';
+    display: block;
+    height: 100%;
+    position: absolute;
+    left: -12px;
+    top: 0;
+    width: 8px;
+  }
+
+  .warning:before {
+    background-color: $avalara-warning-color;
+    color: $avalara-warning-color;
+  }
+
+  .alert:before {
+    background-color: $avalara-alert-red;
+    color: $avalara-alert-red;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}

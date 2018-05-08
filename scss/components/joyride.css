@@ -1,0 +1,38 @@
+.joyride-close-tip {
+  position: absolute;
+  right: 8px;
+  top: 6px; }
+  .joyride-close-tip:hover, .joyride-close-tip:focus {
+    color: #21b7f9 !important; }
+
+.joyride-tip-guide {
+  border: #cccccc 2px solid;
+  border-radius: 2px; }
+  .joyride-tip-guide .joyride-nub.bottom {
+    left: 19px; }
+  .joyride-tip-guide .joyride-nub.right {
+    top: 19px; }
+  .joyride-tip-guide .joyride-nub.top {
+    left: 19px; }
+  .joyride-tip-guide .joyride-nub.shadow-nub {
+    border-color: #cccccc;
+    border: 13px solid #cccccc; }
+    .joyride-tip-guide .joyride-nub.shadow-nub.top {
+      top: -26px;
+      left: 16px; }
+    .joyride-tip-guide .joyride-nub.shadow-nub.bottom {
+      bottom: -26px;
+      left: 16px;
+      border-color: #cccccc !important;
+      border-bottom-color: transparent !important;
+      border-left-color: transparent !important;
+      border-right-color: transparent !important; }
+    .joyride-tip-guide .joyride-nub.shadow-nub.right {
+      right: -26px;
+      top: 16px;
+      border-color: #cccccc !important;
+      border-top-color: transparent !important;
+      border-right-color: transparent !important;
+      border-bottom-color: transparent !important; }
+
+/*# sourceMappingURL=joyride.css.map */
